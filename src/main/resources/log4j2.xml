@@ -3,7 +3,8 @@
     <Appenders>
         <!-- Colored output on the console -->
         <Console name="STDOUT">
-            <PatternLayout pattern="%d{dd/MMM/yyyy:HH:mm:ss} %-5p %m%throwable%n"/>
+            <!-- Remove the `Z` from the date format below to avoid initializing the TZ caches -->
+            <PatternLayout pattern="%d{dd/MMM/yyyy:HH:mm:ss Z} %-5p %m%throwable%n"/>
         </Console>
     </Appenders>
     <Loggers>
